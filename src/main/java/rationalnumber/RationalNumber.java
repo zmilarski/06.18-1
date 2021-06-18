@@ -60,4 +60,12 @@ public class RationalNumber {
         int y = euklides(numerator, denominator);
         return new RationalNumber(numerator / y, denominator / y);
     }
+
+    public RationalNumber add(RationalNumber x) {
+        int licz = numerator * x.denominator + x.numerator * denominator;
+        int miano = denominator * x.denominator;
+
+        return new RationalNumber(licz / euklides(licz, miano), miano / euklides(licz, miano));
+    }
+
 }
