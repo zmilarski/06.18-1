@@ -28,7 +28,8 @@ public class RationalNumber {
     }
 
     public RationalNumber divide(RationalNumber x) {
-        return new RationalNumber(numerator / x.numerator, denominator / x.denominator);
+        //return new RationalNumber(numerator / x.numerator, denominator / x.denominator);
+        return multiply(x.getInverse());
     }
 
     public RationalNumber(int x) {
