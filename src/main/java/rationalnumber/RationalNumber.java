@@ -40,6 +40,7 @@ public class RationalNumber {
         return new RationalNumber(numerator + x, denominator);
     }
 
+
     private static int euklides(int a, int b) {
         if (a % b == 0) {
             return b;
