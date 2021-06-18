@@ -24,4 +24,20 @@ public class Warrior {
     public void hit(Warrior x){
         x.healthpts = x.healthpts - attackpts;
     }
+
+    public void fight(Warrior x){
+        while (x.healthpts > 0 && healthpts > 0){
+            x.healthpts = x.healthpts - attackpts;
+            if(x.healthpts <= 0){
+                break;
+            }
+        }
+        if (x.healthpts < 0){
+            x.healthpts = 0;
+        }
+        if (healthpts < 0){
+            healthpts = 0;
+        }
+    }
+
 }
