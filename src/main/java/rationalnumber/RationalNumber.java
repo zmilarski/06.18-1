@@ -68,4 +68,8 @@ public class RationalNumber {
         return new RationalNumber(licz / euklides(licz, miano), miano / euklides(licz, miano));
     }
 
+    public int compareTo(RationalNumber x) {
+        return numerator * x.denominator - x.numerator * denominator;
+    }
+
 }

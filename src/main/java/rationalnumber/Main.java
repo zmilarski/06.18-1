@@ -27,7 +27,8 @@ public class Main {
         System.out.println(skrocona);
         RationalNumber dodane = skrocona.add(twoThirds);
         System.out.println(dodane);
-
+        System.out.println(dwanascieOsmych.compareTo(twoThirds));
+        System.out.println(fiveThirds.compareTo(fiveThirds));
     }
 
 }
