@@ -21,7 +21,10 @@ public class Main {
         System.out.println(calkow);
         RationalNumber zDodanym = twoThirds.add(5);
         System.out.println(zDodanym);
-
+        RationalNumber dwanascieOsmych = new RationalNumber(12,8);
+        System.out.println(dwanascieOsmych);
+        RationalNumber skrocona = dwanascieOsmych.reduce();
+        System.out.println(skrocona);
     }
 
 }

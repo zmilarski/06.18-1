@@ -56,8 +56,8 @@ public class RationalNumber {
         return x;
     }
 
-    public RationalNumber reduce(RationalNumber x) {
-        int y = euklides(x.numerator, x.denominator);
+    public RationalNumber reduce() {
+        int y = euklides(numerator, denominator);
         return new RationalNumber(numerator / y, denominator / y);
     }
 }
