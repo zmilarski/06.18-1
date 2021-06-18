@@ -20,4 +20,8 @@ public class Warrior {
     public String toString() {
         return "Wojownik o imieniu " + name + ", " + healthpts + " punktach życia i " + attackpts + " punktach ataku.";
     }
+
+    public void hit(Warrior x){
+        x.healthpts = x.healthpts - attackpts;
+    }
 }
