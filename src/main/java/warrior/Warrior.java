@@ -28,14 +28,14 @@ public class Warrior {
     public void fight(Warrior x) {
         while (x.isAlive() && isAlive()) {
             x.healthpts = x.healthpts - attackpts;
-            if (x.healthpts <= 0) {
+            if (!x.isAlive()) {
+                    x.healthpts = 0;
                 break;
             }
+            healthpts = healthpts - x.attackpts;
+
         }
-        if (x.healthpts < 0) {
-            x.healthpts = 0;
-        }
-        if (healthpts < 0) {
+        if (!isAlive()) {
             healthpts = 0;
         }
     }
