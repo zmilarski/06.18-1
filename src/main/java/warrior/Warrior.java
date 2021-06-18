@@ -21,23 +21,27 @@ public class Warrior {
         return "Wojownik o imieniu " + name + ", " + healthpts + " punktach życia i " + attackpts + " punktach ataku.";
     }
 
-    public void hit(Warrior x){
+    public void hit(Warrior x) {
         x.healthpts = x.healthpts - attackpts;
     }
 
-    public void fight(Warrior x){
-        while (x.healthpts > 0 && healthpts > 0){
+    public void fight(Warrior x) {
+        while (x.isAlive() && isAlive()) {
             x.healthpts = x.healthpts - attackpts;
-            if(x.healthpts <= 0){
+            if (x.healthpts <= 0) {
                 break;
             }
         }
-        if (x.healthpts < 0){
+        if (x.healthpts < 0) {
             x.healthpts = 0;
         }
-        if (healthpts < 0){
+        if (healthpts < 0) {
             healthpts = 0;
         }
+    }
+
+    public boolean isAlive() {
+        return healthpts > 0;
     }
 
 }
